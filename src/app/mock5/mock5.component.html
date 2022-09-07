@@ -1,0 +1,45 @@
+<div class="container">
+<div class="">
+         <div class="vamsi" style="display: flex;">
+            <div class="col-md-3">
+               <div class="score">
+                  <h4>{{points}} points</h4>
+               </div>
+               </div>
+               <div class="col-md-3">
+               <div class="question-remain">
+            <span style="font-family: italic;">question {{currentquestion+1}} of {{questionList.length}} </span>
+               </div>
+               </div>
+               <div class="col-md-2">
+               <div class="timer">
+            <h5>{{counter}}sec</h5>
+               </div>
+               
+            </div>
+            </div>
+            <div class="progress" style="width: 50%;">
+               <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width':progress+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+             </div>
+         
+             <div class="que">
+               <div class="card">
+                  <h3>{{questionList[currentquestion]?.questionText}}</h3>
+               </div>
+               </div>
+               <div class="options">
+               <ol  *ngFor="let option of questionList[currentquestion]?.options">
+                 <div class="card">
+                    <li (click)="answer(currentquestion+1,option)">{{option.text}}</li>
+                 </div>
+                 
+               </ol>
+               </div>
+            <div class="krish" style="display: flex; justify-content: space-evenly;">
+               <button [disabled]="currentquestion===0" class="btn btn-primary" (click)="perviousquestion()">perivious</button>
+               <button [disabled]="currentquestion===8" class="btn btn-primary" (click)="nextquestion()">next</button>
+            </div>
+         </div>
+</div>
+
+

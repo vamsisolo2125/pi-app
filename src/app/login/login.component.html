@@ -1,0 +1,67 @@
+<section class="signup">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="mgrlogo" src="../../assets/images/pilogo1.svg" alt="logo" routerLink="/content">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xs-12  contents">
+        <div class="mainheads">
+           <div>
+              <div class="form-block">
+                 <div class="signhead">
+                    <h3>Sign up</h3>
+                 </div>
+              </div>
+           </div>
+           <div>
+              <p class="sub-tit txtbtn"><a  routerLink="/sign"> I don't have an account</a></p>
+           </div></div>
+           
+
+           <form #form="ngForm" (ngSubmit)="onsubmit(form)">
+               <input type="email" class="form-control" id="mail" [(ngModel)]="model.email" name="email"  placeholder="Email ID"  pattern="^[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            <div class="eye">
+               <input [type]="inputtype" class="form-control" id="password" [(ngModel)]="model.password" name="password"  placeholder="password"  required >
+               <div class="eye1" (click)="toggleShow()">
+                <i class="fa fa-eye-slash" aria-hidden="true" style="margin-left: -23px;
+                margin-top: 23px;" [hidden]="showPassword"></i>
+                <i class="fa fa-eye" aria-hidden="true" style="margin-left: -23px;
+                margin-top: 23px;"[hidden]="!showPassword"></i>
+               </div>
+              
+              </div>
+            
+            <!-- <div *ngFor="let log of login | keyvalue">
+              {{log. key}}:{{log.value}}
+            </div> -->
+<!--               
+            <select id="country" name="country" >
+              <option value="australia">Preferred Class</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select> -->
+        
+            <!-- <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
+        <!-- <button type="submit" class="btn">Apply Now</button> -->
+            <!-- <input type="submit" value="Submit"> -->
+          <!-- </form> -->
+ <button type="submit"  data-qa="btnSignupSubmit" class="base_basic__1qybc base_colorGreen__2AdOl loadgif greenbtn" data-loading-text=" Validating Details &nbsp;<i class='fa fa-spinner fa-spin'></i>"><span class="base_text__2aTiN" > Sign In</span></button>
+ <div class="typography_small__2MagS graytxtbtn" style="text-align: center; padding-bottom: 10px;"><a href="passwordnew.php" class="link_link__tEM4H " data-qa="linkForgotPassword" style="color: rgb(109, 117, 141);" routerLink="/password">Can’t sign in?</a></div>
+</form>
+        <div class="google">
+         <img src="../../assets/images/goo.png"><span>Sign up with  Google</span>
+         <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i>
+        </div>
+        <div class="google">
+          <img src="../../assets/images/face.png" style=" width:27px;"><span>Sign up with  Facebook</span>
+          <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i>
+         </div>
+         <div style="color:#6D758D" class="typography_zsmall__2NZHc">This site is protected by reCAPTCHA and the Google<!-- --> <a class="link_link__tEM4H graytxtbtn" target="_blank" style="color:#6D758D" routerLink="/privacy">Privacy Policy</a> <!-- -->and<!-- --> <a style="color:#6D758D;" class="link_link__tEM4H graytxtbtn" target="_blank" routerLink="/terms">Terms of Service</a>apply.</div>
+         <div style="color:#6D758D; line-height: 50px;" class="typography_zsmall__2NZHc"><a style="color:#6D758D;" class="link_link__tEM4H graytxtbtn" target="_blank" routerLink="/terms">Terms of Service</a>   .   <a style="color:#6D758D;" class="link_link__tEM4H graytxtbtn" target="_blank" routerLink="/privacy">Privacy Policy</a>   .   <a style="color:#6D758D;" class="link_link__tEM4H graytxtbtn" target="_blank" href="privacy_policy.php">VVT Privacy Notice</a></div>
+        </div>
+
+</section>
+

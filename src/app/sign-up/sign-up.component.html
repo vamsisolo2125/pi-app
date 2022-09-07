@@ -1,0 +1,78 @@
+<section class="signup">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="mgrlogo" src="../../assets/images/pilogo1.svg" alt="logo" routerLink="/content">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xs-12  contents">
+        <div class="mainheads">
+           <div>
+              <div class="form-block">
+                 <div class="signhead">
+                    <h3>Sign up</h3>
+                 </div>
+              </div>
+           </div>
+           <div>
+              <p class="sub-tit txtbtn"><a  routerLink="/login"> I have an account</a></p>
+           </div></div>
+           
+
+           <form #form="ngForm" (ngSubmit)="onsubmit(form)">
+               
+            <input type="text" class="form-control" id="fname" [(ngModel)]="model.name" name="name" placeholder="frist Name" pattern="[a-zA-Z0-9]+$" required>
+           
+            <input type="text" class="form-control" id="fname" [(ngModel)]="model.lname" name="lname" placeholder="Last Name" pattern="[a-zA-Z0-9]+$" required>
+          
+            <input type="tel" class="form-control" id="lname" [(ngModel)]="model.number" name="number" placeholder="Phone" maxlength="10" pattern="[0-9]{10}" required >
+            
+            <input type="email" class="form-control" id="mail" [(ngModel)]="model.email" name="email"  placeholder="Email ID"  pattern="^[a-z0-9.%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+            <div class="eye">
+               <input [type]="inputtype" class="form-control" id="password" [(ngModel)]="model.password" name="password"  placeholder="password"   required >
+               <a class="eye1" (click)="toggleShow() ">
+               <i class="fa fa-eye-slash" aria-hidden="true" style="margin-left: -23px;
+               margin-top: 23px;" [hidden]="showPassword"></i>
+               <i class="fa fa-eye" aria-hidden="true" style="margin-left: -23px;
+               margin-top: 23px;"[hidden]="!showPassword"></i>
+               </a>
+              </div>
+            
+            <!-- <div *ngFor="let log of login | keyvalue">
+              {{log. key}}:{{log.value}}
+            </div> -->
+<!--               
+            <select id="country" name="country" >
+              <option value="australia">Preferred Class</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select> -->
+        
+            <!-- <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
+        <!-- <button type="submit" class="btn">Apply Now</button> -->
+            <!-- <input type="submit" value="Submit"> -->
+          <!-- </form> -->
+          <div class="signup_checkboxesContainer__2z1BV"><div style="text-align:center" class="typography_xsmall__2NZHc">By signing up, you agree to the<!-- --> <a class="link_link__tEM4H graytxtbtn" target="_blank" style="color:#6D758D" routerLink="/terms">Terms and Conditions</a> and<!-- --> <a class="link_link__tEM4H graytxtbtn" target="_blank" style="color:#6D758D" routerLink="/privacy">Privacy Policy</a>. </div></div>
+          <button type="submit" data-qa="btnSignupSubmit" class="base_basic__1qybc base_colorGreen__2AdOl loadgif greenbtn" data-loading-text=" Validating Details &nbsp;<i class='fa fa-spinner fa-spin'></i>"><span class="base_text__2aTiN" >Agree and Sign up</span></button>
+        </form>
+        <div class="google">
+         <img src="../../assets/images/goo.png"><span>Sign up with  Google</span>
+         <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i>
+        </div>
+        <div class="google">
+          <img src="../../assets/images/face.png" style=" width:27px;"><span>Sign up with  Facebook</span>
+          <i class="fa fa-angle-right" aria-hidden="true" style="float: right;"></i>
+         </div>
+         <div style="color:#6D758D" class="typography_zsmall__2NZHc">This site is protected by reCAPTCHA and the Google<!-- --> <a style="color:#6D758D" class="link_link__tEM4H graytxtbtn" target="_blank" routerLink="/privacy">Privacy Policy</a> <!-- -->and<!-- --> <a style="color:#6D758D" class="link_link__tEM4H graytxtbtn" target="_blank" routerLink="/terms">Terms of Service</a>  apply.</div>
+         <div style="color:#6D758D;margin-top: 20px;" class="typography_zsmall__2NZHc" >You also agree to receive product-related marketing emails from Grammarly, which you can unsubscribe from at any time.</div>
+        </div>
+
+
+
+
+      
+
+
+</section>

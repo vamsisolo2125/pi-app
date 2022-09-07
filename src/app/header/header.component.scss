@@ -1,0 +1,80 @@
+.navbar-brand{
+    margin-left: 10px;
+    color: black;
+}
+img{
+    height: 50px;
+}
+.navbar {
+    background-color: #ffff;
+}
+.banner{
+    background-color:  #E5E5E5;;
+}
+.contact{
+   
+    width: 150px;
+    height: 50px;
+    /* padding: 5px; */
+    display: flex;
+    place-content: center;
+    place-items: center;
+
+// position: relative;
+// width: 193px;
+// height: 56px;
+// left: 87px;
+// top: 5642px;
+
+// background: #005A35;
+// border-radius: 100px;
+}
+.num{
+    color: #ffff;
+}
+// .navbar-nav{
+//     margin: auto;
+// }
+.nav-item a{
+    padding-right: 1.9rem;
+    padding-left: 0.5rem;
+    color: #1D1D1D;
+    text-decoration: none;
+
+}
+li{
+    font-size: 16px;
+    font-weight: 500;
+    color: #525252;
+    // font-family: 'Poppins', sans-serif;
+   
+}
+li:hover ::after{
+    text-decoration: underline gold;
+}
+.container{
+    border-bottom: 1px solid #707070;
+    padding-bottom: 12px;
+}
+.btn0{
+    background: #52bd94;
+border: 0px;
+    width: 100px;
+    border-radius: 100px;
+    color: #ffff;
+    padding: 6px;
+}
+// .nav-item a:hover{
+//     color: red;
+// }
+.navbar-collapse ul .nav-item a.active{
+    color: #00D48D;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .sticky + .navbar7 {
+    padding-top: 102px;
+  }

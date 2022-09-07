@@ -1,0 +1,43 @@
+<!-- <nav class="navbar navbar-expand-lg"> -->
+    <nav class="navbar navbar-expand-lg navbar-fixed-top ">
+        <div class="container content">
+       
+            <img class="mgrlogo" src="../../assets/images/pilogo1.svg" alt="logo" routerLink="/content" [routerLinkActive]="['active']">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+            
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0"  id="mySidenav"> 
+              <li class="nav-item">
+                <a routerLink="/content" [routerLinkActive]="['active']">Home</a>
+              </li>
+              <li class="nav-item">
+                <a   routerLink="/about" [routerLinkActive]="['active']">About Us </a>
+              </li>
+      
+              <li class="nav-item">
+                <a >Contact us</a>
+              </li>
+      
+              <li class="nav-item">
+                <a  >Blog</a>
+              </li>
+              <!-- <li class="nav-item" [ngClass]="{'active':currentSection === 'clients'}">
+                <a [ngxScrollTo]="'#clients'" href="javascript: void(0);" class="nav-link" [ngxScrollToOffset]="2">Clients</a>
+            </li> -->
+            </ul>
+            <!-- <form class="d-flex"> -->
+            <div class="contact">
+             
+              <button class=" btn0 " (click)="loginchange()">{{loginstatus}}</button>
+              </div>
+      
+              <!-- <div class="contact1">
+                <button class="btn8">+91 9876543210</button>
+              </div> -->
+            <!-- </form> -->
+          </div>
+        </div>
+      </nav>
+    

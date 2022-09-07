@@ -1,0 +1,331 @@
+<!-- <div class="head">
+  <img src="../../assets/images/pilogo1.svg">
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  
+  </mat-drawer-container>
+
+</div> -->
+
+<div id="header" class="header section">
+  <div class="top-header1">
+     <div class="header-logo1"> <a href="index.php"><img src="../../assets/images/pilogo1.svg" alt="" style="height: 50px;"></a> </div>
+   
+        <!-- Header Wrapper Start  -->
+        <div class="header-wrapper">
+           <!-- Header Logo Start -->
+           <!-- Header Logo End --> 
+           <!-- Header Menu End --> 
+           <!-- Header Meta Start -->
+           <div class="header-meta">
+              <form action="save_details.php" method="post" id="course_form" class="neetdrop desktop course_form">
+                 
+
+                 <select class="form-select1 default-select courseid" aria-label="Default select example" id="courseid" name="courseid">
+
+                    <option value="1" selected="">NEET</option> 
+
+                 </select>
+                                         <input type="hidden" name="activecourse" class="activecourse" value="1">
+                 <input type="hidden" name="default_course" id="default_course" class="default_course" value="1">
+                 <input type="hidden" name="stuclass" id="stuclass" class="stuclass" value="12+">
+                 <input type="hidden" name="UpdateCourse" value="UpdateCourse">
+              </form>
+              <ul class="  main-menu1 d-none d-lg-block">
+                 <li> <a class="javascript:void(0);" href="index.php">Home</a></li>
+                 <li> <a href="about.php">About</a> </li>
+                 <li> <a href="contact.php">Contact</a> </li>
+               <!--   <li> <a href="blog.php">Blog</a> </li> -->
+              </ul>
+             <!-- <div class=" timer mobile "> 00.00 </div> -->
+              <div id="main1" class=""> 
+                 <a href="#" class="bell open_chatbox" onclick="openNav1()"> 
+                 
+                 <span class="note_cnt" style="display:block;"></span>                        </a> 
+              </div>
+              <div class="desktop"><img src="../../assets/images/vamsi.JPG" style="border-radius: 50px;width: 50px;height: 50px;"></div>
+              <div class="header-login d-lg-flex desktop">
+                 <div class="dropdown3">
+                    <button class="dropbtn3  link2">
+                       <div> <span>Vamsi </span><i class="fa fa-angle-down"></i></div>
+                    </button>
+                    <div class="dropdown-content3">  
+                       <a href="profile.php">Profile</a>
+                       <a href="save_details.php?logout='logout'">Logout</a> 
+                    </div>
+                 </div>
+              </div>
+
+              <div class="header-toggle d-lg-none">
+                 <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"> <span></span> <span></span> <span></span> </button>
+              </div>
+           </div>
+           <!-- Header Meta End --> 
+        </div>
+    
+     <!-- Header Wrapper End --> 
+  </div>
+  <div class="row">
+     <div class="">
+
+    
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      
+
+
+      <ul class="   list-unstyled components  nav">
+        <div class="sdlogo">  <a href="index.php"> <img src="../../assets/images/pilogo2.svg" style="height: 50px;"></a></div>
+    <li class="active1 acts">
+       <a routerLink="/dashboard"><i class="fa fa-dashboard"></i>&nbsp; Dashboard</a>
+    </li>
+
+
+    <li >
+       <!-- <a href="javascript:void(0);" class="toggle-custom1 " id="btn-1" data-toggle="collapse" data-target="#submenu1" aria-expanded="false"><i class="fa fa-file-text-o"></i>Test
+       <span href="#"><span class=" glyphicon-plus icns" aria-hidden="true"></span></span></a>
+       <ul class="nav collapse " id="submenu1" role="menu" aria-labelledby="btn-1">
+         
+          <li><a href="TestDetails.php?id=MQ==&amp;name=QUxMIElORElBIE1PQ0sgVEVTVA==" class="AllTest "><i class="fa fa-angle-right"></i> All India Mock Test</a></li><li><a href="TestDetails.php?id=Mg==&amp;name=UFJFVklPVVMgWUVBUg==" class="AllTest "><i class="fa fa-angle-right"></i> Previous Year</a></li><li><a href="TestDetails.php?id=Mw==&amp;name=UEFSVCBURVNU" class="AllTest "><i class="fa fa-angle-right"></i> Part Test</a></li>
+       </ul> -->
+
+       <cdk-accordion class="example-accordion">
+         <cdk-accordion-item
+           *ngFor="let item of items; let index = index;"
+           #accordionItem="cdkAccordionItem"
+           class="example-accordion-item"
+           role="button"
+           tabindex="0"
+           [attr.id]="'accordion-header-' + index"
+           [attr.aria-expanded]="accordionItem.expanded"
+           [attr.aria-controls]="'accordion-body-' + index">
+           <div class="example-accordion-item-header vam" (click)="accordionItem.toggle()" >
+            <i class="fa fa-file-text-o"></i>{{item }}
+             <span class="example-accordion-item-description">
+               <!-- Click to {{ accordionItem.expanded ? 'close' : 'open' }} -->
+               <i class="fa fa-plus" aria-hidden="true" ></i>
+             </span>
+           </div>
+           <div
+             class="example-accordion-item-body"
+             role="region"
+             [style.display]="accordionItem.expanded ? '' : 'none'"
+             [attr.id]="'accordion-body-' + index"
+             [attr.aria-labelledby]="'accordion-header-' + index">
+            <div class="h">
+             <a  class="AllTest " routerLink="/allindia"><i class="fa fa-angle-right" ></i> All India Mock Test</a><br>
+</div>
+
+             <a href="TestDetails.php?id=Mg==&amp;name=UFJFVklPVVMgWUVBUg==" class="AllTest "><i class="fa fa-angle-right"></i> Previous Year</a><br>
+             <a href="TestDetails.php?id=Mw==&amp;name=UEFSVCBURVNU" class="AllTest "><i class="fa fa-angle-right"></i> Part Test</a>
+           </div>
+         </cdk-accordion-item>
+       </cdk-accordion>
+     
+    </li>
+
+  
+   <!--  <li  >
+       <a href="CustomTestDetails.php" class="toggle-custom1 " id="btn-2" data-toggle="collapse" data-target="#submenu2" aria-expanded="false"><img src="assets/images/custom_test.png">Custom Test
+       <span href="#" ><span class=" glyphicon-plus icns" aria-hidden="true"></span></span></a>
+      
+    </li> -->
+
+    <li class="">
+       <a href="CustomTestDetails.php"><i class="fa fa-list-alt"></i>&nbsp; Create Own Test</a>
+    </li>
+
+    <li>
+       <a href="javascript:void(0);" class="toggle-custom1 " id="btn-3" data-toggle="collapse" data-target="#submenu3" aria-expanded="false"><i class="fa fa-book"></i> &nbsp;Library
+       <span href="#"><span class=" glyphicon-plus icns" aria-hidden="true"></span></span></a>
+       <ul class="nav collapse " id="submenu3" role="menu" aria-labelledby="btn-3">
+         <!--  <li><i class="fa fa-angle-right"></i>All India Mock Tests</li>
+          <li><i class="fa fa-angle-right"></i>Practice Tests</li> -->
+           <li> <a href="bookmark.php" class="AllTest "><i class="fa fa-angle-right"></i>Bookmarked Ques</a></li>
+         
+       </ul>
+    </li>
+     
+         <li class="">
+       <a routerLink="/help"><i class=" fa fa-headphones"></i> &nbsp; Help &amp; Support</a>
+    </li>
+     
+    <li>
+      <cdk-accordion class="example-accordion">
+         <cdk-accordion-item
+           *ngFor="let item of items; let index = index;"
+           #accordionItem="cdkAccordionItem"
+           class="example-accordion-item"
+           role="button"
+           tabindex="0"
+           [attr.id]="'accordion-header-' + index"
+           [attr.aria-expanded]="accordionItem.expanded"
+           [attr.aria-controls]="'accordion-body-' + index">
+           <div class="example-accordion-item-header vam" (click)="accordionItem.toggle()" >
+            <i class="fa fa-comments"></i>Discussion Forum
+                  
+             <span class="example-accordion-item-description">
+               <!-- Click to {{ accordionItem.expanded ? 'close' : 'open' }} -->
+               <i class="fa fa-plus" aria-hidden="true"></i>
+             </span>
+           </div>
+           <div
+             class="example-accordion-item-body"
+             role="region"
+             [style.display]="accordionItem.expanded ? '' : 'none'"
+             [attr.id]="'accordion-body-' + index"
+             [attr.aria-labelledby]="'accordion-header-' + index">
+            <div class="h">
+             <a  class="AllTest " routerLink="/allindia"><i class="fa fa-angle-right" ></i> All Forums</a><br>
+</div>
+
+             <a href="TestDetails.php?id=Mg==&amp;name=UFJFVklPVVMgWUVBUg==" class="AllTest "><i class="fa fa-angle-right"></i> Dashboard</a><br>
+             <a href="TestDetails.php?id=Mw==&amp;name=UEFSVCBURVNU" class="AllTest "><i class="fa fa-angle-right"></i> My Post</a><br>
+             <a href="TestDetails.php?id=Mw==&amp;name=UEFSVCBURVNU" class="AllTest "><i class="fa fa-angle-right"></i> My Replays</a>
+           </div>
+         </cdk-accordion-item>
+       </cdk-accordion>
+    </li>
+         
+ </ul>
+
+<p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <!-- <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button> -->
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()" style="margin-top: -147px;
+      margin-left: 3px; background: #00D48D">
+        <!-- Toggle sidenav -->
+        <!-- <img src="../../assets/images/par1.png"> -->
+        <i class="fa fa-angle-right" aria-hidden="true" style="    background: #00D48D"></i>
+      </button>
+      <!-- <div class="">
+         <div class="vamsi" style="display: flex;">
+            <div class="col-md-3">
+               <div class="score">
+                  <h4>{{points}} points</h4>
+               </div>
+               </div>
+               <div class="col-md-3">
+               <div class="question-remain">
+            <span style="font-family: italic;">question {{currentquestion+1}} of {{questionList.length}} </span>
+               </div>
+               </div>
+               <div class="col-md-2">
+               <div class="timer">
+            <h5>{{counter}}sec</h5>
+               </div>
+               
+            </div>
+            </div>
+            <div class="progress" style="width: 50%;">
+               <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [ngStyle]="{'width':progress+'%'}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+             </div>
+         
+             <div class="que">
+               <div class="card">
+                  <h3>{{questionList[currentquestion]?.questionText}}</h3>
+               </div>
+               </div>
+               <div class="options">
+               <ol  *ngFor="let option of questionList[currentquestion]?.options">
+                 <div class="card">
+                    <li (click)="answer(currentquestion+1,option)">{{option.text}}</li>
+                 </div>
+                 
+               </ol>
+               </div>
+            <div class="krish" style="display: flex; justify-content: space-evenly;">
+               <button [disabled]="currentquestion===0" class="btn btn-primary" (click)="perviousquestion()">perivious</button>
+               <button [disabled]="currentquestion===8" class="btn btn-primary" (click)="nextquestion()">next</button>
+            </div>
+         </div> -->
+
+<div class="col-md-3 test">
+   <h3 class="card-title align-items-start flex-column">
+      <span class="card-label fw-bolder text-dark">ALL INDIA MOCK TEST</span>
+      
+    </h3>
+    <div class="v">
+       <img src="../../assets/images/exam3.svg">
+       <h4>All india mock test 5</h4>
+       <span routerLink="/mock5"><i class="fa fa-arrow-right"></i></span>
+    </div>
+    <div class="v">
+      <img src="../../assets/images/exam3.svg">
+      <h4>All india mock test 4</h4>
+      <span><i class="fa fa-arrow-right"></i></span>
+   </div>
+   <div class="v">
+      <img src="../../assets/images/exam3.svg">
+      <h4>All india mock test 3</h4>
+      <span><i class="fa fa-arrow-right"></i></span>
+   </div>
+   <div class="v">
+      <img src="../../assets/images/exam3.svg">
+      <h4>All india mock test 2</h4>
+      <span><i class="fa fa-arrow-right"></i></span>
+   </div>
+   <div class="v">
+      <img src="../../assets/images/exam3.svg">
+      <h4>All india mock test 1</h4>
+      <span><i class="fa fa-arrow-right"></i></span>
+   </div>
+</div>
+<div class="col-md-3 test1">
+<h3 class="card-title align-items-start flex-column">
+   <span class="card-label fw-bolder text-dark">PREVIOUS YEAR</span>
+   
+ </h3>
+ <div class="v">
+    <img src="../../assets/images/exam3.svg">
+    <h4>Previous Year Papers 2021-Afternoon</h4>
+    <span><i class="fa fa-arrow-right"></i></span>
+ </div>
+ 
+
+
+</div>
+
+<div class="col-md-3 test1">
+   <h3 class="card-title align-items-start flex-column">
+      <span class="card-label fw-bolder text-dark">PREVIOUS YEAR</span>
+      
+    </h3>
+    <div class="v">
+       <img src="../../assets/images/exam3.svg">
+       <h4>PART TEST ZOOLOGY 2021 Paper</h4>
+       <span><i class="fa fa-arrow-right"></i></span>
+    </div>
+    
+   
+   
+   </div>
+    
+      </div>
+      
+  </mat-drawer-container>      
+</div>
+
+
+
+
+</div>
+</div>
+
